@@ -23,17 +23,22 @@ The pipeline performs:
 
 CSV File:
 
-customer_id,customer_name,city
-1,Ram,Hyderabad
-2,Sita,Delhi
+order_id,customer_id,order_status,order_purchase_timestamp,order_approved_at,order_delivered_carrier_date,order_delivered_customer_date,order_estimated_delivery_date  
+100,ascd534,delivered, 2017-10-02 10:56:00.000,	2017-10-02 11:07:00.000, 2017-10-04 19:55:00.000, 2017-10-10 21:25:00.000,2017-10-18 00:00:00.000
+
 
 ## Target Table
 
 ```sql
-CREATE TABLE Customers(
-    customer_id INT,
-    customer_name VARCHAR(100),
-    city VARCHAR(100)
+CREATE TABLE CustOrders(
+    [order_id] varchar(200)
+      ,[customer_id] varchar(200)
+      ,[order_status] varchar(200)
+      ,[order_purchase_timestamp] 
+      ,[order_approved_at] datetime
+      ,[order_delivered_carrier_date] datetime
+      ,[order_delivered_customer_date] datetime
+      ,[order_estimated_delivery_date] datetime 
 );
 ```
 
